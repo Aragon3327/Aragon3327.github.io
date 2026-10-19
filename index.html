@@ -1,450 +1,1370 @@
-<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Miguel Galicia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles/styles.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+  </head>
+  <body>
+    <title>Miguel Galicia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
 
-<header class="bar">
-  <span class="needle" aria-hidden="true"></span>
-  <div class="wrap">
-    <a class="logo" href="#top" aria-label="Miguel Galicia, top of page" data-i18n-aria="a.logo">MG<b>.</b></a>
-    <nav class="nav" aria-label="Sections" data-i18n-aria="a.nav">
-      <a class="l" href="#automation" data-i18n="nav.auto">Automation</a>
-      <a class="l" href="#experience" data-i18n="nav.exp">Experience</a>
-      <a class="l" href="#work" data-i18n="nav.work">Work</a>
-      <a class="l" href="#stack" data-i18n="nav.stack">Stack</a>
-      <a class="l" href="#contact" data-i18n="nav.contact">Contact</a>
-      <div class="tune">
-        <span class="mono" data-i18n="tune">Tune in</span>
-        <div class="lens" role="group" aria-label="Choose what the page emphasizes" data-i18n-aria="a.lens">
-          <button type="button" id="lens-all" data-lens="all" aria-pressed="true" data-i18n="lens.all">Both</button>
-          <button type="button" id="lens-data" data-lens="data" aria-pressed="false" data-i18n="lens.data">Data</button>
-          <button type="button" id="lens-fs" data-lens="fs" aria-pressed="false">Full-stack</button>
-        </div>
-        <div class="langsw" role="group" aria-label="Language" data-i18n-aria="a.lang">
-          <button type="button" data-lang="en" aria-pressed="true" lang="en" aria-label="English">EN</button>
-          <button type="button" data-lang="es" aria-pressed="false" lang="es" aria-label="Español">ES</button>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <div class="hero-bg">
-    <div class="hero wrap">
-      <div class="enter">
-        <p class="eyebrow mono"><span class="onair"><i></i><span data-i18n="onair">On air</span></span><span>Naucalpan, Estado de México</span><span data-i18n="degree">Computer Engineering, Tecnológico de Monterrey</span></p>
-        <span class="hola">¡Hola! Soy</span>
-        <h1 class="display name"><span class="wd w1">Miguel</span><span class="wd w2">Galicia</span></h1>
-        <div class="hero-row">
-          <figure class="portrait" id="portrait">
-            <div class="frame">
-              <img src="images/avatar.png" alt="Portrait of Miguel Galicia" data-i18n-alt="a.portrait" width="640" height="800" decoding="async">
+    <header class="bar">
+      <span class="needle" aria-hidden="true"></span>
+      <div class="wrap">
+        <a
+          class="logo"
+          href="#top"
+          aria-label="Miguel Galicia, top of page"
+          data-i18n-aria="a.logo"
+          >MG<b>.</b></a
+        >
+        <nav class="nav" aria-label="Sections" data-i18n-aria="a.nav">
+          <a class="l" href="#automation" data-i18n="nav.auto">Automation</a>
+          <a class="l" href="#experience" data-i18n="nav.exp">Experience</a>
+          <a class="l" href="#work" data-i18n="nav.work">Work</a>
+          <a class="l" href="#stack" data-i18n="nav.stack">Stack</a>
+          <a class="l" href="#contact" data-i18n="nav.contact">Contact</a>
+          <div class="tune">
+            <span class="mono" data-i18n="tune">Tune in</span>
+            <div
+              class="lens"
+              role="group"
+              aria-label="Choose what the page emphasizes"
+              data-i18n-aria="a.lens"
+            >
+              <button
+                type="button"
+                id="lens-all"
+                data-lens="all"
+                aria-pressed="true"
+                data-i18n="lens.all"
+              >
+                Both
+              </button>
+              <button
+                type="button"
+                id="lens-data"
+                data-lens="data"
+                aria-pressed="false"
+                data-i18n="lens.data"
+              >
+                Data
+              </button>
+              <button
+                type="button"
+                id="lens-fs"
+                data-lens="fs"
+                aria-pressed="false"
+              >
+                Full-stack
+              </button>
             </div>
-            <figcaption class="mono"><i class="live"></i>Miguel Galicia · Naucalpan</figcaption>
-          </figure>
-          <div class="intro">
-            <p class="role display swap" id="role">Full-Stack &amp; Data Engineer</p>
-            <p class="pitch swap" id="pitch">Full-Stack and Data Engineer with 3+ years of experience building Spring Boot/Angular applications at Ford and BI dashboards and automation pipelines at Kärcher that cut process turnaround from 3-5 days to 1. Strong in Python, SQL, and CI/CD, with a track record of turning complex data and business requirements into reliable, shipped solutions.</p>
-            <div class="cta">
-              <a class="btn pri" href="#work" data-i18n="cta.work">See the work</a>
-              <a class="btn" href="#contact" data-i18n="cta.contact">Get in touch</a>
-            </div>
-            <p class="now mono"><b data-i18n="now.b">Right now</b><span data-i18n="now.1">Shipping features at Ford</span><span data-i18n="now.2">Hosting on-air segments at Frecuencia 911</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="flow" aria-hidden="true">
-      <canvas id="flow"></canvas>
-      <span class="tag mono t1" data-i18n="flow.1">raw rows</span>
-      <span class="tag mono t2" data-i18n="flow.2">transform</span>
-      <span class="tag mono t3" data-i18n="flow.3">loaded</span>
-      <span class="tag mono hint" data-i18n="flow.hint">move over the rows to clean them</span>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="n">3–5<em> → </em><span class="hl">1</span></div><p data-i18n="stat.1">days to turn around a logistics process at Kärcher</p></div>
-      <div class="stat"><div class="n">~<span data-count="700">700</span>K</div><p data-i18n="stat.2">rows through the Thales ETL pipeline</p></div>
-      <div class="stat"><div class="n"><span data-count="100">100</span>+</div><p data-i18n="stat.3">users of the Ford enterprise app</p></div>
-      <div class="stat"><div class="n"><span data-count="3">3</span>+</div><p data-i18n="stat.4">years of software and data work</p></div>
-    </div>
-  </div>
-
-  <section id="automation">
-    <div class="wrap">
-      <div class="sh" data-reveal>
-        <span class="mono" data-i18n="auto.label"><b>Automation</b> / Automatización</span>
-        <h2 class="display" data-i18n="auto.h2">Tasks that <span class="hl">run themselves</span></h2>
-        <p class="lede" data-i18n="auto.lede">At Kärcher, a manual production and logistics process took 3-5 days. Python and Google Apps Script, with monitoring on the key steps, brought it down to 1. Here is the idea in miniature.</p>
-      </div>
-      <div data-reveal>
-        <div id="auto" class="lz" data-t="df">
-          <div class="auto">
-            <div class="panel">
-              <p class="mono"><span data-i18n="auto.wf">Workflow</span><span>Python · Apps Script · n8n</span></p>
-              <ol class="steps">
-                <li><i class="dot" data-n="1"></i><div><b data-i18n="st.1b">Trigger</b><span data-i18n="st.1s">A schedule or an event starts the run</span></div></li>
-                <li><i class="dot" data-n="2"></i><div><b>Python</b><span data-i18n="st.2s">Validates and transforms the rows</span></div></li>
-                <li><i class="dot" data-n="3"></i><div><b>Apps Script</b><span data-i18n="st.3s">Updates the shared sheet</span></div></li>
-                <li><i class="dot" data-n="4"></i><div><b data-i18n="st.4b">Monitor</b><span data-i18n="st.4s">Checks the key steps</span></div></li>
-                <li><i class="dot" data-n="5"></i><div><b data-i18n="st.5b">Done</b><span data-i18n="st.5s">The report is ready and nobody touched it</span></div></li>
-              </ol>
-            </div>
-            <div class="panel">
-              <p class="mono"><span data-i18n="q.title">Task queue</span><span data-i18n="q.count">5 requests</span></p>
-              <div class="queue" role="img" aria-label="Five requests moving from queued to done" data-i18n-aria="a.queue">
-                <div class="qrow"><span data-i18n="q.1">Request 1</span><div class="qtrack"><i class="qfill"></i></div><span class="qstat"></span></div>
-                <div class="qrow"><span data-i18n="q.2">Request 2</span><div class="qtrack"><i class="qfill"></i></div><span class="qstat"></span></div>
-                <div class="qrow"><span data-i18n="q.3">Request 3</span><div class="qtrack"><i class="qfill"></i></div><span class="qstat"></span></div>
-                <div class="qrow"><span data-i18n="q.4">Request 4</span><div class="qtrack"><i class="qfill"></i></div><span class="qstat"></span></div>
-                <div class="qrow"><span data-i18n="q.5">Request 5</span><div class="qtrack"><i class="qfill"></i></div><span class="qstat"></span></div>
-              </div>
-              <div class="log" aria-live="off"></div>
+            <div
+              class="langsw"
+              role="group"
+              aria-label="Language"
+              data-i18n-aria="a.lang"
+            >
+              <button
+                type="button"
+                data-lang="en"
+                aria-pressed="true"
+                lang="en"
+                aria-label="English"
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                data-lang="es"
+                aria-pressed="false"
+                lang="es"
+                aria-label="Español"
+              >
+                ES
+              </button>
             </div>
           </div>
-          <div class="auto-ctrl">
-            <button type="button" class="btn pri" id="auto-run" data-i18n="auto.run">Run it again</button>
-            <button type="button" class="btn" id="auto-toggle" aria-pressed="true">Auto-run: on</button>
-            <p class="mono"><span data-i18n="auto.runs">Demo runs:</span> <b id="auto-n">0</b></p>
-            <p class="auto-note" data-i18n="auto.note">Illustrative workflow. The steps and timings on screen are a demo, not the actual Kärcher process.</p>
-          </div>
-        </div>
+        </nav>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="experience">
-    <div class="wrap">
-      <div class="sh" data-reveal>
-        <span class="mono" data-i18n="exp.label"><b>Experience</b> / Experiencia</span>
-        <h2 class="display" data-i18n="exp.h2">Where it <span class="hl">shipped</span></h2>
-      </div>
-      <div class="timeline" id="timeline">
-
-        <article class="job now" data-reveal>
-          <div class="when"><span class="yr" aria-hidden="true">2025</span><span class="mono" data-i18n="j1.date">Oct 2025 — present</span><span class="pill" data-i18n="j1.pill">Now</span></div>
-          <div class="what">
-            <h3 data-i18n="j1.h">Software Engineer, Champ Program</h3>
-            <p class="org">Ford Mexico</p>
-            <ul>
-              <li class="lz" data-t="f" data-i18n="j1.1">Deliver features and bug fixes on an enterprise <b>Spring Boot / Angular</b> application used by <b class="hl">100+ users</b> within a cross-functional Agile team, translating business requirements into working functionality.</li>
-              <li class="lz" data-t="df" data-i18n="j1.2">Write DDL and SQL queries to maintain data integrity and debug issues across the application.</li>
-              <li class="lz" data-t="f" data-i18n="j1.3">Ship through <b>GitHub Actions and Tekton CI/CD</b> pipelines on GCP with Cycode and 42Crunch security scanning, applying SOLID principles and code reviews to keep the codebase maintainable.</li>
-            </ul>
-            <div class="chips"><span class="chip lz" data-t="f">Spring Boot</span><span class="chip lz" data-t="f">Angular</span><span class="chip lz" data-t="df">SQL</span><span class="chip lz" data-t="df">GCP</span><span class="chip lz" data-t="f">Tekton</span><span class="chip lz" data-t="df">GitHub Actions</span></div>
-          </div>
-        </article>
-
-        <article class="job" data-reveal>
-          <div class="when"><span class="yr" aria-hidden="true">2024</span><span class="mono" data-i18n="j2.date">Dec 2024 — Oct 2025</span></div>
-          <div class="what">
-            <h3 data-i18n="j2.h">IT Intern &amp; Data Analyst</h3>
-            <p class="org">Kärcher Mexico</p>
-            <ul>
-              <li class="lz" data-t="d" data-i18n="j2.1">Automated production and logistics workflows with Python and Google Apps Script, cutting turnaround <b class="hl">from 3-5 days to 1 day</b>, with monitoring for key processes.</li>
-              <li class="lz" data-t="d" data-i18n="j2.2">Designed <b>Looker Studio</b> dashboards that uncovered product income patterns; adopted by the sales team and director to guide inventory and supply chain decisions for 100+ products.</li>
-              <li class="lz" data-t="d" data-i18n="j2.3">Built end-to-end analysis pipelines in Python (Polars, Scikit-learn) that surfaced insights for business decisions.</li>
-            </ul>
-            <div class="chips"><span class="chip lz" data-t="df">Python</span><span class="chip lz" data-t="d">Google Apps Script</span><span class="chip lz" data-t="d">Looker Studio</span><span class="chip lz" data-t="d">Polars</span><span class="chip lz" data-t="d">Scikit-learn</span></div>
-          </div>
-        </article>
-
-        <article class="job" data-reveal>
-          <div class="when"><span class="yr" aria-hidden="true">2023</span><span class="mono" data-i18n="j3.date">Dec 2023 — May 2024</span><span class="mono">Freelance</span></div>
-          <div class="what">
-            <h3 data-i18n="j3.h">Software Engineer</h3>
-            <p class="org">Natural Project</p>
-            <ul>
-              <li class="lz" data-t="f" data-i18n="j3.1">Built a <b>Django</b> web application for a team of <b class="hl">10+ users</b> to manage and visualize project data, covering the database, backend, and UI.</li>
-              <li class="lz" data-t="df" data-i18n="j3.2">Designed the relational SQLite schema and developed interactive JavaScript visualizations for stakeholders.</li>
-            </ul>
-            <div class="chips"><span class="chip lz" data-t="f">Django</span><span class="chip lz" data-t="df">SQLite</span><span class="chip lz" data-t="f">JavaScript</span></div>
-          </div>
-        </article>
-
-        <article class="job" data-reveal>
-          <div class="when"><span class="yr" aria-hidden="true">2023</span><span class="mono" data-i18n="j4.date">Apr 2023 — Dec 2023</span><span class="mono">Freelance</span></div>
-          <div class="what">
-            <h3 data-i18n="j4.h">Full-Stack Developer</h3>
-            <p class="org">Idsesa</p>
-            <ul>
-              <li class="lz" data-t="f" data-i18n="j4.1">Lead developer of a Django/SQLite <b>project finance manager</b> tracking budgets, payments, and outstanding balances, with visualizations of every transaction (Apr–Jun 2023).</li>
-              <li class="lz" data-t="f" data-i18n="j4.2">Lead developer of a responsive interactive <b>digital manual built with Flutter</b>, presenting technical data sheets and explanatory videos on all devices (Aug–Dec 2023).</li>
-            </ul>
-            <div class="chips"><span class="chip lz" data-t="f">Django</span><span class="chip lz" data-t="df">SQLite</span><span class="chip lz" data-t="f">Flutter</span></div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="wrap">
-      <div class="sh" data-reveal>
-        <span class="mono" data-i18n="work.label"><b>Selected work</b> / Trabajo</span>
-        <h2 class="display" data-i18n="work.h2"><span class="hl">Projects</span> I built</h2>
-      </div>
-
-      <div data-reveal>
-        <article class="feature lz" data-t="d">
-          <div class="top mono"><span data-i18n="ft.top1">University capstone, Thales</span><span data-i18n="ft.top2">Aug 2025 — Dec 2025</span></div>
-          <h3 data-i18n="ft.h">Data science consulting project with Thales</h3>
-          <div class="cols">
-            <ul>
-              <li data-i18n="ft.1">Architected <b>ETL pipelines with PostgreSQL and Polars</b> to process and transform <b class="hl">~700,000 rows</b> for downstream analytics.</li>
-              <li data-i18n="ft.2">Performed statistical analysis with Scikit-learn and delivered <b>Tableau</b> (predicted data) and <b>Power BI</b> (actual data) dashboards that informed the client’s business decisions.</li>
-              <li data-i18n="ft.3">Built and deployed an <b>n8n</b> data-retrieval chatbot for self-service data queries, reducing manual reporting requests.</li>
-            </ul>
-            <div class="dag" role="img" aria-label="Pipeline: PostgreSQL to Polars to Scikit-learn to Tableau and Power BI, with an n8n chatbot reading the data" data-i18n-aria="a.dag">
-              <div class="dag-in">
-                <div class="node"><small data-i18n="dag.store">store</small>PostgreSQL</div><span class="arr"></span>
-                <div class="node"><small data-i18n="dag.transform">transform</small>Polars</div><span class="arr"></span>
-                <div class="node"><small data-i18n="dag.model">model</small>Scikit-learn</div><span class="arr"></span>
-                <div class="node acc"><small data-i18n="dag.report">report</small>Tableau<br>Power BI</div>
-              </div>
-              <div class="dag-note"><span class="node acc"><small data-i18n="dag.self">self-serve</small>n8n</span><span data-i18n="dag.note">chatbot answers data questions so fewer reports are requested by hand</span></div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <ul class="grid">
-        <li data-reveal>
-          <div class="card lz" data-t="d">
-            <div class="viz">
-              <div class="ba" role="img" aria-label="Turnaround before: 3 to 5 days. After: 1 day." data-i18n-aria="a.ba">
-                <div class="row"><span class="lab" data-i18n="ba.before">Before</span><div class="track"><span class="bar5 solid" style="width:60%"></span><span class="bar5 range" style="left:60%;width:40%"></span></div></div>
-                <div class="row"><span class="lab" data-i18n="ba.after">After</span><div class="track"><span class="bar5 solid" style="width:20%"></span></div></div>
-                <div class="scale"><span data-i18n="ba.days">days</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+    <main id="top">
+      <div class="hero-bg">
+        <div class="hero wrap">
+          <div class="enter">
+            <p class="eyebrow mono">
+              <span class="onair"
+                ><i></i><span data-i18n="onair">On air</span></span
+              ><span>Naucalpan, Estado de México</span
+              ><span data-i18n="degree"
+                >Computer Engineering, Tecnológico de Monterrey</span
+              >
+            </p>
+            <span class="hola">¡Hola! Soy</span>
+            <h1 class="display name">
+              <span class="wd w1">Miguel</span
+              ><span class="wd w2">Galicia</span>
+            </h1>
+            <div class="hero-row">
+              <figure class="portrait" id="portrait">
+                <div class="frame">
+                  <img
+                    src="images/avatar.png"
+                    alt="Portrait of Miguel Galicia"
+                    data-i18n-alt="a.portrait"
+                    width="640"
+                    height="800"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="mono">
+                  <i class="live"></i>Miguel Galicia · Naucalpan
+                </figcaption>
+              </figure>
+              <div class="intro">
+                <p class="role display swap" id="role">
+                  Full-Stack &amp; Data Engineer
+                </p>
+                <p class="pitch swap" id="pitch">
+                  Full-Stack and Data Engineer with 3+ years of experience
+                  building Spring Boot/Angular applications at Ford and BI
+                  dashboards and automation pipelines at Kärcher that cut
+                  process turnaround from 3-5 days to 1. Strong in Python, SQL,
+                  and CI/CD, with a track record of turning complex data and
+                  business requirements into reliable, shipped solutions.
+                </p>
+                <div class="cta">
+                  <a class="btn pri" href="#work" data-i18n="cta.work"
+                    >See the work</a
+                  >
+                  <a class="btn" href="#contact" data-i18n="cta.contact"
+                    >Get in touch</a
+                  >
+                </div>
+                <p class="now mono">
+                  <b data-i18n="now.b">Right now</b
+                  ><span data-i18n="now.1">Shipping features at Ford</span
+                  ><span data-i18n="now.2"
+                    >Hosting on-air segments at Frecuencia 911</span
+                  >
+                </p>
               </div>
             </div>
-            <div class="cbody">
-              <span class="mono">Kärcher Mexico · 2024–2025</span>
-              <h3 data-i18n="c1.h">Logistics workflow automation</h3>
-              <p data-i18n="c1.p">Python and Google Apps Script replaced a manual production and logistics process, with monitoring on the key steps.</p>
-              <div class="chips"><span class="chip">Python</span><span class="chip">Apps Script</span></div>
-            </div>
           </div>
-        </li>
-        <li data-reveal>
-          <div class="card lz" data-t="d">
-            <div class="viz">
-              <svg viewBox="0 0 300 116" role="img" aria-label="Bar chart of income by product, last bar highlighted" data-i18n-aria="a.viz1">
-                <line class="sv-line" x1="20" y1="100" x2="284" y2="100"/>
-                <line class="sv-dash" x1="20" y1="54" x2="284" y2="54"/>
-                <rect class="sv-acc" x="28" y="74" width="20" height="26" rx="2"/>
-                <rect class="sv-acc" x="60" y="62" width="20" height="38" rx="2"/>
-                <rect class="sv-acc" x="92" y="68" width="20" height="32" rx="2"/>
-                <rect class="sv-acc" x="124" y="50" width="20" height="50" rx="2"/>
-                <rect class="sv-acc" x="156" y="56" width="20" height="44" rx="2"/>
-                <rect class="sv-acc" x="188" y="38" width="20" height="62" rx="2"/>
-                <rect class="sv-acc" x="220" y="44" width="20" height="56" rx="2"/>
-                <rect class="sv-needle" x="252" y="22" width="20" height="78" rx="2"/>
-              </svg>
-            </div>
-            <div class="cbody">
-              <span class="mono">Kärcher Mexico · 2024–2025</span>
-              <h3 data-i18n="c2.h">Sales and inventory dashboards</h3>
-              <p data-i18n="c2.p">Looker Studio dashboards that showed <b>income patterns by product</b>. The sales team and the director used them to guide inventory and supply chain decisions for 100+ products.</p>
-              <div class="chips"><span class="chip">Looker Studio</span><span class="chip">Polars</span><span class="chip">Scikit-learn</span></div>
-            </div>
-          </div>
-        </li>
-        <li data-reveal>
-          <div class="card lz" data-t="f">
-            <div class="viz">
-              <svg viewBox="0 0 300 116" role="img" aria-label="A web dashboard next to a phone app" data-i18n-aria="a.viz2">
-                <rect class="sv-ink" x="34" y="14" width="150" height="88" rx="6"/>
-                <line class="sv-line" x1="34" y1="30" x2="184" y2="30"/>
-                <circle class="sv-dot" cx="45" cy="22" r="2.5"/><circle class="sv-dot" cx="54" cy="22" r="2.5"/><circle class="sv-dot" cx="63" cy="22" r="2.5"/>
-                <rect class="sv-mute" x="46" y="42" width="60" height="6" rx="3"/>
-                <rect class="sv-acc" x="124" y="42" width="48" height="6" rx="3"/>
-                <rect class="sv-mute" x="46" y="56" width="100" height="6" rx="3"/>
-                <rect class="sv-mute" x="46" y="70" width="82" height="6" rx="3"/>
-                <rect class="sv-mute" x="46" y="84" width="110" height="6" rx="3"/>
-                <rect class="sv-ink" x="212" y="8" width="52" height="100" rx="9"/>
-                <rect class="sv-mute" x="222" y="26" width="32" height="6" rx="3"/>
-                <rect class="sv-mute" x="222" y="40" width="22" height="6" rx="3"/>
-                <rect class="sv-acc" x="222" y="58" width="32" height="24" rx="4"/>
-                <rect class="sv-needle" x="231" y="94" width="14" height="4" rx="2"/>
-              </svg>
-            </div>
-            <div class="cbody">
-              <span class="mono" data-i18n="c3.meta">Zazil · Sept — Dec 2024</span>
-              <h3 data-i18n="c3.h">Purchasing app and web dashboard</h3>
-              <p data-i18n="c3.p">An inventory portal for purchasing and warehouse staff: Django/PostgreSQL backend, Tailwind CSS frontend, and a companion <b>Kotlin Android app</b>.</p>
-              <div class="chips"><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Tailwind CSS</span><span class="chip">Kotlin</span></div>
-            </div>
-          </div>
-        </li>
-        <li data-reveal>
-          <div class="card lz" data-t="df">
-            <div class="viz">
-              <svg viewBox="0 0 300 116" role="img" aria-label="Three linked database tables" data-i18n-aria="a.viz3">
-                <path class="sv-line" d="M118 46 H157 V32 H196 M157 46 V86 H196"/>
-                <rect class="sv-ink" x="34" y="18" width="84" height="60" rx="5"/>
-                <rect class="sv-acc" x="34" y="18" width="84" height="14" rx="5"/>
-                <rect class="sv-mute" x="42" y="42" width="44" height="5" rx="2.5"/><rect class="sv-mute" x="42" y="54" width="60" height="5" rx="2.5"/><rect class="sv-mute" x="42" y="66" width="36" height="5" rx="2.5"/>
-                <rect class="sv-ink" x="196" y="10" width="84" height="46" rx="5"/>
-                <rect class="sv-acc" x="196" y="10" width="84" height="14" rx="5"/>
-                <rect class="sv-mute" x="204" y="33" width="50" height="5" rx="2.5"/><rect class="sv-mute" x="204" y="44" width="38" height="5" rx="2.5"/>
-                <rect class="sv-ink" x="196" y="66" width="84" height="40" rx="5"/>
-                <rect class="sv-needle" x="196" y="66" width="84" height="14" rx="5"/>
-                <rect class="sv-mute" x="204" y="89" width="46" height="5" rx="2.5"/>
-              </svg>
-            </div>
-            <div class="cbody">
-              <span class="mono">Natural Project · 2023–2024</span>
-              <h3 data-i18n="c4.h">Project data manager</h3>
-              <p data-i18n="c4.p">A Django app for a team of <b>10+ users</b> with a relational SQLite schema and interactive JavaScript visualizations for stakeholders.</p>
-              <div class="chips"><span class="chip">Django</span><span class="chip">SQLite</span><span class="chip">JavaScript</span></div>
-            </div>
-          </div>
-        </li>
-        <li data-reveal>
-          <div class="card lz" data-t="f">
-            <div class="viz">
-              <svg viewBox="0 0 300 116" role="img" aria-label="Budget rows showing paid and outstanding amounts" data-i18n-aria="a.viz4">
-                <defs><pattern id="hz" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="3" height="6" style="fill:var(--accent);opacity:.5"/></pattern></defs>
-                <rect class="sv-mute" x="26" y="25" width="36" height="6" rx="3"/>
-                <rect class="sv-ink" x="76" y="20" width="198" height="16" rx="3"/>
-                <rect class="sv-acc" x="77" y="21" width="124" height="14" rx="2"/><rect x="201" y="21" width="72" height="14" fill="url(#hz)"/>
-                <rect class="sv-mute" x="26" y="53" width="36" height="6" rx="3"/>
-                <rect class="sv-ink" x="76" y="48" width="198" height="16" rx="3"/>
-                <rect class="sv-acc" x="77" y="49" width="160" height="14" rx="2"/><rect x="237" y="49" width="36" height="14" fill="url(#hz)"/>
-                <rect class="sv-mute" x="26" y="81" width="36" height="6" rx="3"/>
-                <rect class="sv-ink" x="76" y="76" width="198" height="16" rx="3"/>
-                <rect class="sv-needle" x="77" y="77" width="82" height="14" rx="2"/><rect x="159" y="77" width="114" height="14" fill="url(#hz)"/>
-              </svg>
-            </div>
-            <div class="cbody">
-              <span class="mono">Idsesa · 2023</span>
-              <h3 data-i18n="c5.h">Finance manager and digital manual</h3>
-              <p data-i18n="c5.p">A project finance manager for budgets, payments and balances, plus a responsive <b>Flutter</b> manual that shows data sheets and videos on any device.</p>
-              <div class="chips"><span class="chip">Django</span><span class="chip">SQLite</span><span class="chip">Flutter</span></div>
-            </div>
-          </div>
-        </li>
-        <li data-reveal>
-          <div class="card lz" data-t="df">
-            <div class="viz">
-              <svg viewBox="0 0 300 116" role="img" aria-label="A 24-hour clock ring" data-i18n-aria="a.viz5">
-                <circle class="sv-ring" cx="150" cy="58" r="40" stroke-dasharray="3.2 7.27"/>
-                <rect class="sv-needle" x="147.5" y="10" width="5" height="14" rx="2"/>
-                <text class="sv-txt" x="150" y="67">24h</text>
-              </svg>
-            </div>
-            <div class="cbody">
-              <span class="mono">Hack MX, Liverpool · 2024</span>
-              <h3 data-i18n="c6.h">24-hour hackathon build</h3>
-              <p data-i18n="c6.p">Full-stack developer on an <b>AI-powered image search</b> app. Built the image handling and processing system.</p>
-              <div class="chips"><span class="chip">Full-stack</span><span class="chip" data-i18n="c6.chip">Image processing</span></div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="stack">
-    <div class="wrap">
-      <div class="sh" data-reveal>
-        <span class="mono" data-i18n="stack.label"><b>Stack</b> / Herramientas</span>
-        <h2 class="display" data-i18n="stack.h2">What I <span class="hl">work</span> with</h2>
-      </div>
-      <div class="stack" data-reveal>
-        <div class="group"><h3 data-i18n="g1">Data &amp; analytics</h3><ul class="chips">
-          <li class="chip lz" data-t="df">SQL</li><li class="chip lz" data-t="df">Python</li><li class="chip lz" data-t="d">Polars</li><li class="chip lz" data-t="d">Scikit-learn</li><li class="chip lz" data-t="d" data-i18n="k.etl">ETL pipelines</li><li class="chip lz" data-t="d" data-i18n="k.stat">Statistical analysis</li><li class="chip lz" data-t="d" data-i18n="k.pred">Predictive modeling</li><li class="chip lz" data-t="d" data-i18n="k.viz">Data visualization</li>
-        </ul></div>
-        <div class="group"><h3 data-i18n="g2">BI &amp; reporting</h3><ul class="chips">
-          <li class="chip lz" data-t="d">Tableau</li><li class="chip lz" data-t="d">Power BI</li><li class="chip lz" data-t="d">Looker Studio</li><li class="chip lz" data-t="d">Excel / Google Sheets</li>
-        </ul></div>
-        <div class="group"><h3 data-i18n="g3">Automation &amp; cloud</h3><ul class="chips">
-          <li class="chip lz" data-t="d">n8n</li><li class="chip lz" data-t="d">Google Apps Script</li><li class="chip lz" data-t="df">GCP</li><li class="chip lz" data-t="df">AWS</li><li class="chip lz" data-t="f">Docker</li><li class="chip lz" data-t="df">Git</li><li class="chip lz" data-t="df">GitHub Actions</li><li class="chip lz" data-t="f">Tekton</li><li class="chip lz" data-t="f">Cycode</li><li class="chip lz" data-t="f">42Crunch</li><li class="chip lz" data-t="f">Agile / Scrum</li>
-        </ul></div>
-        <div class="group"><h3 data-i18n="g4">Databases</h3><ul class="chips">
-          <li class="chip lz" data-t="df">PostgreSQL</li><li class="chip lz" data-t="df">MySQL</li><li class="chip lz" data-t="df">MongoDB</li><li class="chip lz" data-t="df">SQLite</li><li class="chip lz" data-t="f">GraphQL</li>
-        </ul></div>
-        <div class="group"><h3 data-i18n="g5">Languages</h3><ul class="chips">
-          <li class="chip lz" data-t="f">Java</li><li class="chip lz" data-t="f">JavaScript</li><li class="chip lz" data-t="f">Kotlin</li><li class="chip lz" data-t="f">Dart</li><li class="chip lz" data-t="f">C++</li><li class="chip lz" data-t="f">HTML / CSS</li>
-        </ul></div>
-        <div class="group"><h3 data-i18n="g6">Frameworks &amp; APIs</h3><ul class="chips">
-          <li class="chip lz" data-t="f">Spring Boot</li><li class="chip lz" data-t="f">Angular</li><li class="chip lz" data-t="f">Django</li><li class="chip lz" data-t="f">React</li><li class="chip lz" data-t="f">Express.js</li><li class="chip lz" data-t="f">Tailwind CSS</li><li class="chip lz" data-t="f">Jetpack Compose</li><li class="chip lz" data-t="f">Flutter</li><li class="chip lz" data-t="f">REST APIs</li>
-        </ul></div>
-      </div>
-      <p class="spoken mono" data-reveal><span data-i18n="sp.1">Spoken: <b>Spanish</b> native</span><span data-i18n="sp.2"><b>English</b> B2</span></p>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="wrap">
-      <div class="sh" data-reveal>
-        <span class="mono" data-i18n="edu.label"><b>Education &amp; beyond</b> / Educación y más</span>
-        <h2 class="display" data-i18n="edu.h2">Off the <span class="hl">clock</span></h2>
-      </div>
-      <div class="duo" data-reveal>
-        <div class="edu">
-          <span class="mono" data-i18n="edu.date">Aug 2022 — June 2026</span>
-          <h3 data-i18n="edu.h">BS in Computer Engineering</h3>
-          <p>Tecnológico de Monterrey</p>
-          <p data-i18n="edu.conc">Concentration: Data Analytics and Artificial Intelligence Tools</p>
-        </div>
-        <ul class="beyond">
-          <li>
-            <span class="mono" data-i18n="b1.date">Sept 2026 — present</span>
-            <h3 data-i18n="b1.h">Radio announcer, Frecuencia 911</h3>
-            <p data-i18n="b1.p">Host on-air segments for a student-run radio station, developing public speaking, live communication, and content-creation skills.</p>
-          </li>
-          <li>
-            <span class="mono" data-i18n="b2.date">January 2026</span>
-            <h3 data-i18n="b2.h">Mathematics tutor, Jóvenes Ayudando a Niñas y Niños AC</h3>
-            <p data-i18n="b2.p">Taught mathematics to underprivileged youth.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="sh" data-reveal>
-        <span class="mono" data-i18n="ct.label"><b>Contact</b> / Contacto</span>
-        <h2 class="display big" data-i18n="ct.h2">Let’s build <span>something.</span></h2>
-        <p class="hablemos" data-i18n="ct.sub">Hablemos. English or Spanish, both work.</p>
-      </div>
-      <div class="rows" data-reveal>
-        <div class="crow profile-row mail">
-          <span class="mono" data-i18n="ct.email">Email</span>
-          <a class="val link" id="v-email" href="mailto:m.galicia3327@gmail.com">m.galicia3327@gmail.com</a>
-          <button type="button" class="copy" data-copy="m.galicia3327@gmail.com" data-target="v-email">Copy</button>
-        </div>
-        <div class="crow profile-row">
-          <span class="mono">LinkedIn</span>
-          <a class="val link" id="v-linkedin" href="https://www.linkedin.com/in/miguelga-sa/" target="_blank" rel="noreferrer">miguelga-sa</a>
-          <button type="button" class="copy" data-copy="https://www.linkedin.com/in/miguelga-sa/" data-target="v-linkedin">Copy</button>
-        </div>
-        <div class="crow profile-row">
-          <span class="mono">GitHub</span>
-          <a class="val link" id="v-github" href="https://github.com/Aragon3327" target="_blank" rel="noreferrer">Aragon3327</a>
-          <button type="button" class="copy" data-copy="https://github.com/Aragon3327" data-target="v-github">Copy</button>
         </div>
       </div>
-    </div>
-  </section>
-</main>
 
-<footer>
-  <div class="wrap mono"><span>Miguel Galicia</span><span>Hecho en Naucalpan, Estado de México</span></div>
-</footer>
+      <div class="wrap">
+        <div class="flow" aria-hidden="true">
+          <canvas id="flow"></canvas>
+          <span class="tag mono t1" data-i18n="flow.1">raw rows</span>
+          <span class="tag mono t2" data-i18n="flow.2">transform</span>
+          <span class="tag mono t3" data-i18n="flow.3">loaded</span>
+          <span class="tag mono hint" data-i18n="flow.hint"
+            >move over the rows to clean them</span
+          >
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="n">3–5<em> → </em><span class="hl">1</span></div>
+            <p data-i18n="stat.1">
+              days to turn around a logistics process at Kärcher
+            </p>
+          </div>
+          <div class="stat">
+            <div class="n">~<span data-count="700">700</span>K</div>
+            <p data-i18n="stat.2">rows through the Thales ETL pipeline</p>
+          </div>
+          <div class="stat">
+            <div class="n"><span data-count="100">100</span>+</div>
+            <p data-i18n="stat.3">users of the Ford enterprise app</p>
+          </div>
+          <div class="stat">
+            <div class="n"><span data-count="3">3</span>+</div>
+            <p data-i18n="stat.4">years of software and data work</p>
+          </div>
+        </div>
+      </div>
 
-<script src="scripts/scripts.js"></script>
-<script src="scripts/i18n.js"></script>
+      <section id="automation">
+        <div class="wrap">
+          <div class="sh" data-reveal>
+            <span class="mono" data-i18n="auto.label"
+              ><b>Automation</b> / Automatización</span
+            >
+            <h2 class="display" data-i18n="auto.h2">
+              Tasks that <span class="hl">run themselves</span>
+            </h2>
+            <p class="lede" data-i18n="auto.lede">
+              At Kärcher, a manual production and logistics process took 3-5
+              days. Python and Google Apps Script, with monitoring on the key
+              steps, brought it down to 1. Here is the idea in miniature.
+            </p>
+          </div>
+          <div data-reveal>
+            <div id="auto" class="lz" data-t="df">
+              <div class="auto">
+                <div class="panel">
+                  <p class="mono">
+                    <span data-i18n="auto.wf">Workflow</span
+                    ><span>Python · Apps Script · n8n</span>
+                  </p>
+                  <ol class="steps">
+                    <li>
+                      <i class="dot" data-n="1"></i>
+                      <div>
+                        <b data-i18n="st.1b">Trigger</b
+                        ><span data-i18n="st.1s"
+                          >A schedule or an event starts the run</span
+                        >
+                      </div>
+                    </li>
+                    <li>
+                      <i class="dot" data-n="2"></i>
+                      <div>
+                        <b>Python</b
+                        ><span data-i18n="st.2s"
+                          >Validates and transforms the rows</span
+                        >
+                      </div>
+                    </li>
+                    <li>
+                      <i class="dot" data-n="3"></i>
+                      <div>
+                        <b>Apps Script</b
+                        ><span data-i18n="st.3s">Updates the shared sheet</span>
+                      </div>
+                    </li>
+                    <li>
+                      <i class="dot" data-n="4"></i>
+                      <div>
+                        <b data-i18n="st.4b">Monitor</b
+                        ><span data-i18n="st.4s">Checks the key steps</span>
+                      </div>
+                    </li>
+                    <li>
+                      <i class="dot" data-n="5"></i>
+                      <div>
+                        <b data-i18n="st.5b">Done</b
+                        ><span data-i18n="st.5s"
+                          >The report is ready and nobody touched it</span
+                        >
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <div class="panel">
+                  <p class="mono">
+                    <span data-i18n="q.title">Task queue</span
+                    ><span data-i18n="q.count">5 requests</span>
+                  </p>
+                  <div
+                    class="queue"
+                    role="img"
+                    aria-label="Five requests moving from queued to done"
+                    data-i18n-aria="a.queue"
+                  >
+                    <div class="qrow">
+                      <span data-i18n="q.1">Request 1</span>
+                      <div class="qtrack"><i class="qfill"></i></div>
+                      <span class="qstat"></span>
+                    </div>
+                    <div class="qrow">
+                      <span data-i18n="q.2">Request 2</span>
+                      <div class="qtrack"><i class="qfill"></i></div>
+                      <span class="qstat"></span>
+                    </div>
+                    <div class="qrow">
+                      <span data-i18n="q.3">Request 3</span>
+                      <div class="qtrack"><i class="qfill"></i></div>
+                      <span class="qstat"></span>
+                    </div>
+                    <div class="qrow">
+                      <span data-i18n="q.4">Request 4</span>
+                      <div class="qtrack"><i class="qfill"></i></div>
+                      <span class="qstat"></span>
+                    </div>
+                    <div class="qrow">
+                      <span data-i18n="q.5">Request 5</span>
+                      <div class="qtrack"><i class="qfill"></i></div>
+                      <span class="qstat"></span>
+                    </div>
+                  </div>
+                  <div class="log" aria-live="off"></div>
+                </div>
+              </div>
+              <div class="auto-ctrl">
+                <button
+                  type="button"
+                  class="btn pri"
+                  id="auto-run"
+                  data-i18n="auto.run"
+                >
+                  Run it again
+                </button>
+                <button
+                  type="button"
+                  class="btn"
+                  id="auto-toggle"
+                  aria-pressed="true"
+                >
+                  Auto-run: on
+                </button>
+                <p class="mono">
+                  <span data-i18n="auto.runs">Demo runs:</span>
+                  <b id="auto-n">0</b>
+                </p>
+                <p class="auto-note" data-i18n="auto.note">
+                  Illustrative workflow. The steps and timings on screen are a
+                  demo, not the actual Kärcher process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="experience">
+        <div class="wrap">
+          <div class="sh" data-reveal>
+            <span class="mono" data-i18n="exp.label"
+              ><b>Experience</b> / Experiencia</span
+            >
+            <h2 class="display" data-i18n="exp.h2">
+              Where it <span class="hl">shipped</span>
+            </h2>
+          </div>
+          <div class="timeline" id="timeline">
+            <article class="job now" data-reveal>
+              <div class="when">
+                <span class="yr" aria-hidden="true">2025</span
+                ><span class="mono" data-i18n="j1.date">Oct 2025 — present</span
+                ><span class="pill" data-i18n="j1.pill">Now</span>
+              </div>
+              <div class="what">
+                <h3 data-i18n="j1.h">Software Engineer, Champ Program</h3>
+                <p class="org">Ford Mexico</p>
+                <ul>
+                  <li class="lz" data-t="f" data-i18n="j1.1">
+                    Deliver features and bug fixes on an enterprise
+                    <b>Spring Boot / Angular</b> application used by
+                    <b class="hl">100+ users</b> within a cross-functional Agile
+                    team, translating business requirements into working
+                    functionality.
+                  </li>
+                  <li class="lz" data-t="df" data-i18n="j1.2">
+                    Write DDL and SQL queries to maintain data integrity and
+                    debug issues across the application.
+                  </li>
+                  <li class="lz" data-t="f" data-i18n="j1.3">
+                    Ship through
+                    <b>GitHub Actions and Tekton CI/CD</b> pipelines on GCP with
+                    Cycode and 42Crunch security scanning, applying SOLID
+                    principles and code reviews to keep the codebase
+                    maintainable.
+                  </li>
+                </ul>
+                <div class="chips">
+                  <span class="chip lz" data-t="f">Spring Boot</span
+                  ><span class="chip lz" data-t="f">Angular</span
+                  ><span class="chip lz" data-t="df">SQL</span
+                  ><span class="chip lz" data-t="df">GCP</span
+                  ><span class="chip lz" data-t="f">Tekton</span
+                  ><span class="chip lz" data-t="df">GitHub Actions</span>
+                </div>
+              </div>
+            </article>
 
-</body></html>
+            <article class="job" data-reveal>
+              <div class="when">
+                <span class="yr" aria-hidden="true">2024</span
+                ><span class="mono" data-i18n="j2.date"
+                  >Dec 2024 — Oct 2025</span
+                >
+              </div>
+              <div class="what">
+                <h3 data-i18n="j2.h">IT Intern &amp; Data Analyst</h3>
+                <p class="org">Kärcher Mexico</p>
+                <ul>
+                  <li class="lz" data-t="d" data-i18n="j2.1">
+                    Automated production and logistics workflows with Python and
+                    Google Apps Script, cutting turnaround
+                    <b class="hl">from 3-5 days to 1 day</b>, with monitoring
+                    for key processes.
+                  </li>
+                  <li class="lz" data-t="d" data-i18n="j2.2">
+                    Designed <b>Looker Studio</b> dashboards that uncovered
+                    product income patterns; adopted by the sales team and
+                    director to guide inventory and supply chain decisions for
+                    100+ products.
+                  </li>
+                  <li class="lz" data-t="d" data-i18n="j2.3">
+                    Built end-to-end analysis pipelines in Python (Polars,
+                    Scikit-learn) that surfaced insights for business decisions.
+                  </li>
+                </ul>
+                <div class="chips">
+                  <span class="chip lz" data-t="df">Python</span
+                  ><span class="chip lz" data-t="d">Google Apps Script</span
+                  ><span class="chip lz" data-t="d">Looker Studio</span
+                  ><span class="chip lz" data-t="d">Polars</span
+                  ><span class="chip lz" data-t="d">Scikit-learn</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="job" data-reveal>
+              <div class="when">
+                <span class="yr" aria-hidden="true">2023</span
+                ><span class="mono" data-i18n="j3.date"
+                  >Dec 2023 — May 2024</span
+                ><span class="mono">Freelance</span>
+              </div>
+              <div class="what">
+                <h3 data-i18n="j3.h">Software Engineer</h3>
+                <p class="org">Natural Project</p>
+                <ul>
+                  <li class="lz" data-t="f" data-i18n="j3.1">
+                    Built a <b>Django</b> web application for a team of
+                    <b class="hl">10+ users</b> to manage and visualize project
+                    data, covering the database, backend, and UI.
+                  </li>
+                  <li class="lz" data-t="df" data-i18n="j3.2">
+                    Designed the relational SQLite schema and developed
+                    interactive JavaScript visualizations for stakeholders.
+                  </li>
+                </ul>
+                <div class="chips">
+                  <span class="chip lz" data-t="f">Django</span
+                  ><span class="chip lz" data-t="df">SQLite</span
+                  ><span class="chip lz" data-t="f">JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="job" data-reveal>
+              <div class="when">
+                <span class="yr" aria-hidden="true">2023</span
+                ><span class="mono" data-i18n="j4.date"
+                  >Apr 2023 — Dec 2023</span
+                ><span class="mono">Freelance</span>
+              </div>
+              <div class="what">
+                <h3 data-i18n="j4.h">Full-Stack Developer</h3>
+                <p class="org">Idsesa</p>
+                <ul>
+                  <li class="lz" data-t="f" data-i18n="j4.1">
+                    Lead developer of a Django/SQLite
+                    <b>project finance manager</b> tracking budgets, payments,
+                    and outstanding balances, with visualizations of every
+                    transaction (Apr–Jun 2023).
+                  </li>
+                  <li class="lz" data-t="f" data-i18n="j4.2">
+                    Lead developer of a responsive interactive
+                    <b>digital manual built with Flutter</b>, presenting
+                    technical data sheets and explanatory videos on all devices
+                    (Aug–Dec 2023).
+                  </li>
+                </ul>
+                <div class="chips">
+                  <span class="chip lz" data-t="f">Django</span
+                  ><span class="chip lz" data-t="df">SQLite</span
+                  ><span class="chip lz" data-t="f">Flutter</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="work">
+        <div class="wrap">
+          <div class="sh" data-reveal>
+            <span class="mono" data-i18n="work.label"
+              ><b>Selected work</b> / Trabajo</span
+            >
+            <h2 class="display" data-i18n="work.h2">
+              <span class="hl">Projects</span> I built
+            </h2>
+          </div>
+
+          <div data-reveal>
+            <article class="feature lz" data-t="d">
+              <div class="top mono">
+                <span data-i18n="ft.top1">University capstone, Thales</span
+                ><span data-i18n="ft.top2">Aug 2025 — Dec 2025</span>
+              </div>
+              <h3 data-i18n="ft.h">
+                Data science consulting project with Thales
+              </h3>
+              <div class="cols">
+                <ul>
+                  <li data-i18n="ft.1">
+                    Architected
+                    <b>ETL pipelines with PostgreSQL and Polars</b> to process
+                    and transform <b class="hl">~700,000 rows</b> for downstream
+                    analytics.
+                  </li>
+                  <li data-i18n="ft.2">
+                    Performed statistical analysis with Scikit-learn and
+                    delivered <b>Tableau</b> (predicted data) and
+                    <b>Power BI</b> (actual data) dashboards that informed the
+                    client’s business decisions.
+                  </li>
+                  <li data-i18n="ft.3">
+                    Built and deployed an <b>n8n</b> data-retrieval chatbot for
+                    self-service data queries, reducing manual reporting
+                    requests.
+                  </li>
+                </ul>
+                <div
+                  class="dag"
+                  role="img"
+                  aria-label="Pipeline: PostgreSQL to Polars to Scikit-learn to Tableau and Power BI, with an n8n chatbot reading the data"
+                  data-i18n-aria="a.dag"
+                >
+                  <div class="dag-in">
+                    <div class="node">
+                      <small data-i18n="dag.store">store</small>PostgreSQL
+                    </div>
+                    <span class="arr"></span>
+                    <div class="node">
+                      <small data-i18n="dag.transform">transform</small>Polars
+                    </div>
+                    <span class="arr"></span>
+                    <div class="node">
+                      <small data-i18n="dag.model">model</small>Scikit-learn
+                    </div>
+                    <span class="arr"></span>
+                    <div class="node acc">
+                      <small data-i18n="dag.report">report</small
+                      >Tableau<br />Power BI
+                    </div>
+                  </div>
+                  <div class="dag-note">
+                    <span class="node acc"
+                      ><small data-i18n="dag.self">self-serve</small>n8n</span
+                    ><span data-i18n="dag.note"
+                      >chatbot answers data questions so fewer reports are
+                      requested by hand</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <ul class="grid">
+            <li data-reveal>
+              <div class="card lz" data-t="d">
+                <div class="viz">
+                  <div
+                    class="ba"
+                    role="img"
+                    aria-label="Turnaround before: 3 to 5 days. After: 1 day."
+                    data-i18n-aria="a.ba"
+                  >
+                    <div class="row">
+                      <span class="lab" data-i18n="ba.before">Before</span>
+                      <div class="track">
+                        <span class="bar5 solid" style="width: 60%"></span
+                        ><span
+                          class="bar5 range"
+                          style="left: 60%; width: 40%"
+                        ></span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <span class="lab" data-i18n="ba.after">After</span>
+                      <div class="track">
+                        <span class="bar5 solid" style="width: 20%"></span>
+                      </div>
+                    </div>
+                    <div class="scale">
+                      <span data-i18n="ba.days">days</span><span>1</span
+                      ><span>2</span><span>3</span><span>4</span><span>5</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cbody">
+                  <span class="mono">Kärcher Mexico · 2024–2025</span>
+                  <h3 data-i18n="c1.h">Logistics workflow automation</h3>
+                  <p data-i18n="c1.p">
+                    Python and Google Apps Script replaced a manual production
+                    and logistics process, with monitoring on the key steps.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Python</span
+                    ><span class="chip">Apps Script</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-reveal>
+              <div class="card lz" data-t="d">
+                <div class="viz">
+                  <svg
+                    viewBox="0 0 300 116"
+                    role="img"
+                    aria-label="Bar chart of income by product, last bar highlighted"
+                    data-i18n-aria="a.viz1"
+                  >
+                    <line class="sv-line" x1="20" y1="100" x2="284" y2="100" />
+                    <line class="sv-dash" x1="20" y1="54" x2="284" y2="54" />
+                    <rect
+                      class="sv-acc"
+                      x="28"
+                      y="74"
+                      width="20"
+                      height="26"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="60"
+                      y="62"
+                      width="20"
+                      height="38"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="92"
+                      y="68"
+                      width="20"
+                      height="32"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="124"
+                      y="50"
+                      width="20"
+                      height="50"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="156"
+                      y="56"
+                      width="20"
+                      height="44"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="188"
+                      y="38"
+                      width="20"
+                      height="62"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="220"
+                      y="44"
+                      width="20"
+                      height="56"
+                      rx="2"
+                    />
+                    <rect
+                      class="sv-needle"
+                      x="252"
+                      y="22"
+                      width="20"
+                      height="78"
+                      rx="2"
+                    />
+                  </svg>
+                </div>
+                <div class="cbody">
+                  <span class="mono">Kärcher Mexico · 2024–2025</span>
+                  <h3 data-i18n="c2.h">Sales and inventory dashboards</h3>
+                  <p data-i18n="c2.p">
+                    Looker Studio dashboards that showed
+                    <b>income patterns by product</b>. The sales team and the
+                    director used them to guide inventory and supply chain
+                    decisions for 100+ products.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Looker Studio</span
+                    ><span class="chip">Polars</span
+                    ><span class="chip">Scikit-learn</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-reveal>
+              <div class="card lz" data-t="f">
+                <div class="viz">
+                  <svg
+                    viewBox="0 0 300 116"
+                    role="img"
+                    aria-label="A web dashboard next to a phone app"
+                    data-i18n-aria="a.viz2"
+                  >
+                    <rect
+                      class="sv-ink"
+                      x="34"
+                      y="14"
+                      width="150"
+                      height="88"
+                      rx="6"
+                    />
+                    <line class="sv-line" x1="34" y1="30" x2="184" y2="30" />
+                    <circle class="sv-dot" cx="45" cy="22" r="2.5" />
+                    <circle class="sv-dot" cx="54" cy="22" r="2.5" />
+                    <circle class="sv-dot" cx="63" cy="22" r="2.5" />
+                    <rect
+                      class="sv-mute"
+                      x="46"
+                      y="42"
+                      width="60"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="124"
+                      y="42"
+                      width="48"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="46"
+                      y="56"
+                      width="100"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="46"
+                      y="70"
+                      width="82"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="46"
+                      y="84"
+                      width="110"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="212"
+                      y="8"
+                      width="52"
+                      height="100"
+                      rx="9"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="222"
+                      y="26"
+                      width="32"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="222"
+                      y="40"
+                      width="22"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="222"
+                      y="58"
+                      width="32"
+                      height="24"
+                      rx="4"
+                    />
+                    <rect
+                      class="sv-needle"
+                      x="231"
+                      y="94"
+                      width="14"
+                      height="4"
+                      rx="2"
+                    />
+                  </svg>
+                </div>
+                <div class="cbody">
+                  <span class="mono" data-i18n="c3.meta"
+                    >Zazil · Sept — Dec 2024</span
+                  >
+                  <h3 data-i18n="c3.h">Purchasing app and web dashboard</h3>
+                  <p data-i18n="c3.p">
+                    An inventory portal for purchasing and warehouse staff:
+                    Django/PostgreSQL backend, Tailwind CSS frontend, and a
+                    companion <b>Kotlin Android app</b>.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Django</span
+                    ><span class="chip">PostgreSQL</span
+                    ><span class="chip">Tailwind CSS</span
+                    ><span class="chip">Kotlin</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-reveal>
+              <div class="card lz" data-t="df">
+                <div class="viz">
+                  <svg
+                    viewBox="0 0 300 116"
+                    role="img"
+                    aria-label="Three linked database tables"
+                    data-i18n-aria="a.viz3"
+                  >
+                    <path
+                      class="sv-line"
+                      d="M118 46 H157 V32 H196 M157 46 V86 H196"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="34"
+                      y="18"
+                      width="84"
+                      height="60"
+                      rx="5"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="34"
+                      y="18"
+                      width="84"
+                      height="14"
+                      rx="5"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="42"
+                      y="42"
+                      width="44"
+                      height="5"
+                      rx="2.5"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="42"
+                      y="54"
+                      width="60"
+                      height="5"
+                      rx="2.5"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="42"
+                      y="66"
+                      width="36"
+                      height="5"
+                      rx="2.5"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="196"
+                      y="10"
+                      width="84"
+                      height="46"
+                      rx="5"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="196"
+                      y="10"
+                      width="84"
+                      height="14"
+                      rx="5"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="204"
+                      y="33"
+                      width="50"
+                      height="5"
+                      rx="2.5"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="204"
+                      y="44"
+                      width="38"
+                      height="5"
+                      rx="2.5"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="196"
+                      y="66"
+                      width="84"
+                      height="40"
+                      rx="5"
+                    />
+                    <rect
+                      class="sv-needle"
+                      x="196"
+                      y="66"
+                      width="84"
+                      height="14"
+                      rx="5"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="204"
+                      y="89"
+                      width="46"
+                      height="5"
+                      rx="2.5"
+                    />
+                  </svg>
+                </div>
+                <div class="cbody">
+                  <span class="mono">Natural Project · 2023–2024</span>
+                  <h3 data-i18n="c4.h">Project data manager</h3>
+                  <p data-i18n="c4.p">
+                    A Django app for a team of <b>10+ users</b> with a
+                    relational SQLite schema and interactive JavaScript
+                    visualizations for stakeholders.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Django</span
+                    ><span class="chip">SQLite</span
+                    ><span class="chip">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-reveal>
+              <div class="card lz" data-t="f">
+                <div class="viz">
+                  <svg
+                    viewBox="0 0 300 116"
+                    role="img"
+                    aria-label="Budget rows showing paid and outstanding amounts"
+                    data-i18n-aria="a.viz4"
+                  >
+                    <defs>
+                      <pattern
+                        id="hz"
+                        width="6"
+                        height="6"
+                        patternUnits="userSpaceOnUse"
+                        patternTransform="rotate(45)"
+                      >
+                        <rect
+                          width="3"
+                          height="6"
+                          style="fill: var(--accent); opacity: 0.5"
+                        />
+                      </pattern>
+                    </defs>
+                    <rect
+                      class="sv-mute"
+                      x="26"
+                      y="25"
+                      width="36"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="76"
+                      y="20"
+                      width="198"
+                      height="16"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="77"
+                      y="21"
+                      width="124"
+                      height="14"
+                      rx="2"
+                    />
+                    <rect
+                      x="201"
+                      y="21"
+                      width="72"
+                      height="14"
+                      fill="url(#hz)"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="26"
+                      y="53"
+                      width="36"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="76"
+                      y="48"
+                      width="198"
+                      height="16"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-acc"
+                      x="77"
+                      y="49"
+                      width="160"
+                      height="14"
+                      rx="2"
+                    />
+                    <rect
+                      x="237"
+                      y="49"
+                      width="36"
+                      height="14"
+                      fill="url(#hz)"
+                    />
+                    <rect
+                      class="sv-mute"
+                      x="26"
+                      y="81"
+                      width="36"
+                      height="6"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-ink"
+                      x="76"
+                      y="76"
+                      width="198"
+                      height="16"
+                      rx="3"
+                    />
+                    <rect
+                      class="sv-needle"
+                      x="77"
+                      y="77"
+                      width="82"
+                      height="14"
+                      rx="2"
+                    />
+                    <rect
+                      x="159"
+                      y="77"
+                      width="114"
+                      height="14"
+                      fill="url(#hz)"
+                    />
+                  </svg>
+                </div>
+                <div class="cbody">
+                  <span class="mono">Idsesa · 2023</span>
+                  <h3 data-i18n="c5.h">Finance manager and digital manual</h3>
+                  <p data-i18n="c5.p">
+                    A project finance manager for budgets, payments and
+                    balances, plus a responsive <b>Flutter</b> manual that shows
+                    data sheets and videos on any device.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Django</span
+                    ><span class="chip">SQLite</span
+                    ><span class="chip">Flutter</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-reveal>
+              <div class="card lz" data-t="df">
+                <div class="viz">
+                  <svg
+                    viewBox="0 0 300 116"
+                    role="img"
+                    aria-label="A 24-hour clock ring"
+                    data-i18n-aria="a.viz5"
+                  >
+                    <circle
+                      class="sv-ring"
+                      cx="150"
+                      cy="58"
+                      r="40"
+                      stroke-dasharray="3.2 7.27"
+                    />
+                    <rect
+                      class="sv-needle"
+                      x="147.5"
+                      y="10"
+                      width="5"
+                      height="14"
+                      rx="2"
+                    />
+                    <text class="sv-txt" x="150" y="67">24h</text>
+                  </svg>
+                </div>
+                <div class="cbody">
+                  <span class="mono">Hack MX, Liverpool · 2024</span>
+                  <h3 data-i18n="c6.h">24-hour hackathon build</h3>
+                  <p data-i18n="c6.p">
+                    Full-stack developer on an
+                    <b>AI-powered image search</b> app. Built the image handling
+                    and processing system.
+                  </p>
+                  <div class="chips">
+                    <span class="chip">Full-stack</span
+                    ><span class="chip" data-i18n="c6.chip"
+                      >Image processing</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="stack">
+        <div class="wrap">
+          <div class="sh" data-reveal>
+            <span class="mono" data-i18n="stack.label"
+              ><b>Stack</b> / Herramientas</span
+            >
+            <h2 class="display" data-i18n="stack.h2">
+              What I <span class="hl">work</span> with
+            </h2>
+          </div>
+          <div class="stack" data-reveal>
+            <div class="group">
+              <h3 data-i18n="g1">Data &amp; analytics</h3>
+              <ul class="chips">
+                <li class="chip lz" data-t="df">SQL</li>
+                <li class="chip lz" data-t="df">Python</li>
+                <li class="chip lz" data-t="d">Polars</li>
+                <li class="chip lz" data-t="d">Scikit-learn</li>
+                <li class="chip lz" data-t="d" data-i18n="k.etl">
+                  ETL pipelines
+                </li>
+                <li class="chip lz" data-t="d" data-i18n="k.stat">
+                  Statistical analysis
+                </li>
+                <li class="chip lz" data-t="d" data-i18n="k.pred">
+                  Predictive modeling
+                </li>
+                <li class="chip lz" data-t="d" data-i18n="k.viz">
+                  Data visualization
+                </li>
+              </ul>
+            </div>
+            <div class="group">
+              <h3 data-i18n="g2">BI &amp; reporting</h3>
+              <ul class="chips">
+                <li class="chip lz" data-t="d">Tableau</li>
+                <li class="chip lz" data-t="d">Power BI</li>
+                <li class="chip lz" data-t="d">Looker Studio</li>
+                <li class="chip lz" data-t="d">Excel / Google Sheets</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h3 data-i18n="g3">Automation &amp; cloud</h3>
+              <ul class="chips">
+                <li class="chip lz" data-t="d">n8n</li>
+                <li class="chip lz" data-t="d">Google Apps Script</li>
+                <li class="chip lz" data-t="df">GCP</li>
+                <li class="chip lz" data-t="df">AWS</li>
+                <li class="chip lz" data-t="f">Docker</li>
+                <li class="chip lz" data-t="df">Git</li>
+                <li class="chip lz" data-t="df">GitHub Actions</li>
+                <li class="chip lz" data-t="f">Tekton</li>
+                <li class="chip lz" data-t="f">Cycode</li>
+                <li class="chip lz" data-t="f">42Crunch</li>
+                <li class="chip lz" data-t="f">Agile / Scrum</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h3 data-i18n="g4">Databases</h3>
+              <ul class="chips">
+                <li class="chip lz" data-t="df">PostgreSQL</li>
+                <li class="chip lz" data-t="df">MySQL</li>
+                <li class="chip lz" data-t="df">MongoDB</li>
+                <li class="chip lz" data-t="df">SQLite</li>
+                <li class="chip lz" data-t="f">GraphQL</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h3 data-i18n="g5">Languages</h3>
+              <ul class="chips">
+                <li class="chip lz" data-t="f">Java</li>
+                <li class="chip lz" data-t="f">JavaScript</li>
+                <li class="chip lz" data-t="f">Kotlin</li>
+                <li class="chip lz" data-t="f">Dart</li>
+                <li class="chip lz" data-t="f">C++</li>
+                <li class="chip lz" data-t="f">HTML / CSS</li>
+              </ul>
+            </div>
+            <div class="group">
+              <h3 data-i18n="g6">Frameworks &amp; APIs</h3>
+              <ul class="chips">
+                <li class="chip lz" data-t="f">Spring Boot</li>
+                <li class="chip lz" data-t="f">Angular</li>
+                <li class="chip lz" data-t="f">Django</li>
+                <li class="chip lz" data-t="f">React</li>
+                <li class="chip lz" data-t="f">Express.js</li>
+                <li class="chip lz" data-t="f">Tailwind CSS</li>
+                <li class="chip lz" data-t="f">Jetpack Compose</li>
+                <li class="chip lz" data-t="f">Flutter</li>
+                <li class="chip lz" data-t="f">REST APIs</li>
+              </ul>
+            </div>
+          </div>
+          <p class="spoken mono" data-reveal>
+            <span data-i18n="sp.1">Spoken: <b>Spanish</b> native</span
+            ><span data-i18n="sp.2"><b>English</b> B2</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="wrap">
+          <div class="sh" data-reveal>
+            <span class="mono" data-i18n="edu.label"
+              ><b>Education &amp; beyond</b> / Educación y más</span
+            >
+            <h2 class="display" data-i18n="edu.h2">
+              Off the <span class="hl">clock</span>
+            </h2>
+          </div>
+          <div class="duo" data-reveal>
+            <div class="edu">
+              <span class="mono" data-i18n="edu.date"
+                >Aug 2022 — June 2026</span
+              >
+              <h3 data-i18n="edu.h">BS in Computer Engineering</h3>
+              <p>Tecnológico de Monterrey</p>
+              <p data-i18n="edu.conc">
+                Concentration: Data Analytics and Artificial Intelligence Tools
+              </p>
+            </div>
+            <ul class="beyond">
+              <li>
+                <span class="mono" data-i18n="b1.date"
+                  >Sept 2026 — present</span
+                >
+                <h3 data-i18n="b1.h">Radio announcer, Frecuencia 911</h3>
+                <p data-i18n="b1.p">
+                  Host on-air segments for a student-run radio station,
+                  developing public speaking, live communication, and
+                  content-creation skills.
+                </p>
+              </li>
+              <li>
+                <span class="mono" data-i18n="b2.date">January 2026</span>
+                <h3 data-i18n="b2.h">
+                  Mathematics tutor, Jóvenes Ayudando a Niñas y Niños AC
+                </h3>
+                <p data-i18n="b2.p">
+                  Taught mathematics to underprivileged youth.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <div class="sh" data-reveal>
+            <span class="mono" data-i18n="ct.label"
+              ><b>Contact</b> / Contacto</span
+            >
+            <h2 class="display big" data-i18n="ct.h2">
+              Let’s build <span>something.</span>
+            </h2>
+            <p class="hablemos" data-i18n="ct.sub">
+              Hablemos. English or Spanish, both work.
+            </p>
+          </div>
+          <div class="rows" data-reveal>
+            <div class="crow profile-row mail">
+              <span class="mono" data-i18n="ct.email">Email</span>
+              <a
+                class="val link"
+                id="v-email"
+                href="mailto:m.galicia3327@gmail.com"
+                >m.galicia3327@gmail.com</a
+              >
+              <button
+                type="button"
+                class="copy"
+                data-copy="m.galicia3327@gmail.com"
+                data-target="v-email"
+              >
+                Copy
+              </button>
+            </div>
+            <div class="crow profile-row">
+              <span class="mono">LinkedIn</span>
+              <a
+                class="val link"
+                id="v-linkedin"
+                href="https://www.linkedin.com/in/miguelga-sa/"
+                target="_blank"
+                rel="noreferrer"
+                >miguelga-sa</a
+              >
+              <button
+                type="button"
+                class="copy"
+                data-copy="https://www.linkedin.com/in/miguelga-sa/"
+                data-target="v-linkedin"
+              >
+                Copy
+              </button>
+            </div>
+            <div class="crow profile-row">
+              <span class="mono">GitHub</span>
+              <a
+                class="val link"
+                id="v-github"
+                href="https://github.com/Aragon3327"
+                target="_blank"
+                rel="noreferrer"
+                >Aragon3327</a
+              >
+              <button
+                type="button"
+                class="copy"
+                data-copy="https://github.com/Aragon3327"
+                data-target="v-github"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap mono">
+        <span>Miguel Galicia</span
+        ><span>Hecho en Naucalpan, Estado de México</span>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/i18n.js"></script>
+  </body>
+</html>

@@ -12,6 +12,23 @@
         fs: { role: 'Full-Stack Software Engineer',
             pitch: 'Full-Stack Software Engineer with 3+ years of experience building web applications with Spring Boot, Angular, and Django, currently extending an enterprise application used by 100+ users at Ford through CI/CD pipelines on GCP. Comfortable from database design and REST APIs to responsive frontends and Android, with added strength in Python automation and data work. Computer Engineering graduate from Tecnológico de Monterrey.' }
     };
+    /* Spanish versions of the three emphases */
+    LENS.all.es = { role: 'Ingeniero Full-Stack y de Datos',
+        pitch: 'Ingeniero Full-Stack y de Datos con más de 3 años de experiencia desarrollando aplicaciones Spring Boot/Angular en Ford y dashboards de BI y pipelines de automatización en Kärcher que redujeron el tiempo de un proceso de 3-5 días a 1. Sólido en Python, SQL y CI/CD, con trayectoria convirtiendo datos complejos y requerimientos de negocio en soluciones confiables y entregadas.' };
+    LENS.data.es = { role: 'Ingeniero y Analista de Datos',
+        pitch: 'Ingeniero y Analista de Datos con más de 3 años de experiencia en software y datos, construyendo pipelines ETL, dashboards de BI y automatizaciones de flujos con Python, SQL y PostgreSQL. Reduje un proceso logístico de 3-5 días a 1 en Kärcher y entregué analítica en Tableau y Power BI sobre un conjunto de 700,000 filas para Thales, respaldado por experiencia de ingeniería en producción en Ford. Egresado de Ingeniería en Computación (Analítica de Datos e Inteligencia Artificial).' };
+    LENS.fs.es = { role: 'Ingeniero de Software Full-Stack',
+        pitch: 'Ingeniero de Software Full-Stack con más de 3 años de experiencia desarrollando aplicaciones web con Spring Boot, Angular y Django; actualmente amplío una aplicación empresarial usada por más de 100 usuarios en Ford mediante pipelines de CI/CD en GCP. Me muevo con soltura desde el diseño de bases de datos y APIs REST hasta frontends responsivos y Android, con fortaleza adicional en automatización con Python y trabajo con datos. Egresado de Ingeniería en Computación del Tecnológico de Monterrey.' };
+
+    /* small UI strings that scripts write themselves */
+    var STR = {
+        en: { autoOn: 'Auto-run: on', autoOff: 'Auto-run: off', copy: 'Copy', copied: 'Copied', selected: 'Selected' },
+        es: { autoOn: 'Auto-ejecución: sí', autoOff: 'Auto-ejecución: no', copy: 'Copiar', copied: 'Copiado', selected: 'Seleccionado' }
+    };
+    function isEs() { return root.getAttribute('lang') === 'es'; }
+    function S(k) { return STR[isEs() ? 'es' : 'en'][k]; }
+    var curLens = 'all';
+
     var roleEl = document.getElementById('role');
     var pitchEl = document.getElementById('pitch');
     var lensEl = document.querySelector('.lens');
@@ -33,12 +50,14 @@
 
     function setLens(key, animate) {
         if (!LENS[key]) key = 'all';
+        curLens = key;
         root.setAttribute('data-lens', key);
         lensBtns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lens') === key ? 'true' : 'false'); });
         moveKnob();
         var apply = function () {
-            roleEl.textContent = LENS[key].role;
-            pitchEl.textContent = LENS[key].pitch;
+            var T = (isEs() && LENS[key].es) ? LENS[key].es : LENS[key];
+            roleEl.textContent = T.role;
+            pitchEl.textContent = T.pitch;
             roleEl.classList.remove('out'); pitchEl.classList.remove('out');
         };
         clearTimeout(swapTimer);
@@ -53,6 +72,14 @@
     try { saved = localStorage.getItem('mg-lens') || 'all'; } catch (e) {}
     setLens(saved, false);
     requestAnimationFrame(function () { knob.classList.add('ready'); });
+
+    /* language change: re-apply the hero text, refit the knob, relabel script-written buttons */
+    document.addEventListener('mg-lang', function () {
+        clearTimeout(swapTimer);
+        setLens(curLens, false);
+        requestAnimationFrame(moveKnob);
+        Array.prototype.forEach.call(document.querySelectorAll('.copy'), function (b) { b.textContent = S('copy'); });
+    });
     window.addEventListener('resize', moveKnob);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveKnob);
 
@@ -103,8 +130,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('.copy'), function (b) {
         b.addEventListener('click', function () {
             var done = function (ok) {
-                b.textContent = ok ? 'Copied' : 'Selected';
-                setTimeout(function () { b.textContent = 'Copy'; }, 1800);
+                b.textContent = ok ? S('copied') : S('selected');
+                setTimeout(function () { b.textContent = S('copy'); }, 1800);
             };
             var fallback = function () {
                 var el = document.getElementById(b.getAttribute('data-target'));
@@ -195,23 +222,37 @@
         var runBtn = document.getElementById('auto-run');
         var togBtn = document.getElementById('auto-toggle');
         var nEl = document.getElementById('auto-n');
-        var LOG = [
+        var LOG_EN = [
             ['00:00', 'trigger', 'new request received'],
             ['00:01', 'python', 'rows validated and transformed'],
             ['00:02', 'script', 'shared sheet updated'],
             ['00:03', 'monitor', 'key steps checked, all clear'],
             ['00:04', 'done', 'report ready, 5 of 5 requests closed']
         ];
+        var LOG_ES = [
+            ['00:00', 'disparador', 'nueva solicitud recibida'],
+            ['00:01', 'python', 'filas validadas y transformadas'],
+            ['00:02', 'script', 'hoja compartida actualizada'],
+            ['00:03', 'monitoreo', 'pasos clave revisados, todo en orden'],
+            ['00:04', 'listo', 'reporte listo, 5 de 5 solicitudes cerradas']
+        ];
+        function logRow(i) { return (isEs() ? LOG_ES : LOG_EN)[i]; }
         var timers = [], playing = false, autoOn = true, visible = false, runs = 0;
 
         function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
         function clearAll() { timers.forEach(clearTimeout); timers = []; }
-        function addLine(L) {
-            var d = document.createElement('span');
-            d.className = 'ln';
+        function fillLine(d, i) {
+            var L = logRow(i);
+            d.textContent = '';
             var a = document.createElement('i'); a.textContent = '[' + L[0] + ']';
             var b = document.createElement('u'); b.textContent = L[1];
             d.appendChild(a); d.appendChild(b); d.appendChild(document.createTextNode(L[2]));
+        }
+        function addLine(i) {
+            var d = document.createElement('span');
+            d.className = 'ln';
+            d.setAttribute('data-i', i);
+            fillLine(d, i);
             logEl.appendChild(d);
         }
         function reset() {
@@ -224,7 +265,7 @@
             reset();
             steps.forEach(function (s) { s.classList.add('ok'); });
             rows.forEach(function (r) { r.classList.add('done'); });
-            LOG.forEach(addLine);
+            for (var i = 0; i < LOG_EN.length; i++) addLine(i);
             playing = false;
         }
         function run() {
@@ -233,7 +274,7 @@
             playing = true;
             var t = 250;
             steps.forEach(function (s, i) {
-                at(t, function () { s.classList.add('run'); addLine(LOG[i]); });
+                at(t, function () { s.classList.add('run'); addLine(i); });
                 t += 700;
                 at(t, function () { s.classList.remove('run'); s.classList.add('ok'); });
                 t += 120;
@@ -249,11 +290,15 @@
         }
 
         showFinal();
+        document.addEventListener('mg-lang', function () {
+            togBtn.textContent = S(autoOn ? 'autoOn' : 'autoOff');
+            Array.prototype.forEach.call(logEl.querySelectorAll('.ln'), function (d) { fillLine(d, +d.getAttribute('data-i')); });
+        });
         runBtn.addEventListener('click', run);
         togBtn.addEventListener('click', function () {
             autoOn = !autoOn;
             togBtn.setAttribute('aria-pressed', autoOn ? 'true' : 'false');
-            togBtn.textContent = 'Auto-run: ' + (autoOn ? 'on' : 'off');
+            togBtn.textContent = S(autoOn ? 'autoOn' : 'autoOff');
             if (autoOn && visible && !playing) run();
         });
         if ('IntersectionObserver' in window && !reduce) {

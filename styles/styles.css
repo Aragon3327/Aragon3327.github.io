@@ -70,8 +70,8 @@ h1, h2, h3, p { margin: 0; }
 .bar::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; pointer-events: none;
     background:
-        linear-gradient(90deg, var(--muted) 1px, transparent 1px) 0 100% / 50px 10px repeat-x,
-        linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 100% / 10px 5px repeat-x;
+            linear-gradient(90deg, var(--muted) 1px, transparent 1px) 0 100% / 50px 10px repeat-x,
+            linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 100% / 10px 5px repeat-x;
 }
 .needle {
     position: absolute; bottom: 0; left: calc((100% - 3px) * var(--sp, 0)); width: 3px; height: 16px;
@@ -97,6 +97,22 @@ h1, h2, h3, p { margin: 0; }
 .lens button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 .lens.has-knob button[aria-pressed="true"] { background: transparent; }
 .lens button:not([aria-pressed="true"]):hover { color: var(--ink); }
+/* language switch */
+.langsw { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); margin-left: .2rem; }
+.langsw button {
+    font: 500 .78rem var(--f-mono); letter-spacing: .06em; color: var(--muted);
+    background: transparent; border: 0; border-radius: 999px; padding: .38rem .62rem; cursor: pointer;
+    transition: background .25s, color .25s;
+}
+.langsw button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.langsw button:not([aria-pressed="true"]):hover { color: var(--ink); }
+@media (max-width: 480px) {
+    .bar .wrap { gap: .5rem; }
+    .tune { gap: .35rem; }
+    .lens button { padding: .38rem .55rem; font-size: .72rem; }
+    .langsw { margin-left: 0; }
+    .langsw button { padding: .38rem .5rem; font-size: .72rem; }
+}
 @media (max-width: 1000px) { .nav a.l { display: none; } }
 @media (max-width: 760px) { .tune .mono { display: none; } }
 
@@ -110,7 +126,6 @@ h1, h2, h3, p { margin: 0; }
 }
 .hero { position: relative; padding-block: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 3vw, 2rem); }
 .eyebrow { color: var(--muted); display: flex; flex-wrap: wrap; gap: .4rem 1.3rem; align-items: center; }
-.eyebrow span:not(.onair)::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--accent); margin-right: .55rem; border-radius: 1px; }
 .onair { display: inline-flex; align-items: center; gap: .5rem; padding: .22rem .65rem; border: 1px solid var(--live); color: var(--live); border-radius: 4px; font-weight: 500; }
 .onair i { width: .55rem; height: .55rem; border-radius: 50%; background: var(--live); animation: pulse 1.6s ease-in-out infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); } 50% { opacity: .55; box-shadow: 0 0 0 6px transparent; } }
@@ -326,6 +341,7 @@ h2.display { font-size: clamp(2.3rem, 7vw, 4.4rem); }
     opacity: .7;
     transition: transform .2s ease, opacity .2s ease;
 }
+.profile-row.mail .val.link::after { content: "@"; }
 .profile-row .val.link:hover { color: var(--accent); }
 .profile-row .val.link:hover::after { transform: translate(.12rem, -.18rem); opacity: 1; }
 .copy { font: 500 .76rem var(--f-mono); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 4px; padding: .4rem .7rem; cursor: pointer; transition: border-color .2s, background .2s, transform .2s; white-space: nowrap; }
@@ -366,6 +382,9 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .qstat::after { content: "queued"; }
 .qrow.go .qstat::after { content: "running"; color: var(--accent); }
 .qrow.done .qstat::after { content: "done ✓"; color: var(--ink); }
+:root[lang="es"] .qstat::after { content: "en cola"; }
+:root[lang="es"] .qrow.go .qstat::after { content: "ejecutando"; }
+:root[lang="es"] .qrow.done .qstat::after { content: "listo ✓"; }
 .log { margin-top: 1.3rem; border: 1px dashed var(--line); border-radius: 8px; background: var(--bg); padding: .9rem 1rem; font: 400 .78rem/1.75 var(--f-mono); min-height: 9.8rem; color: var(--muted); overflow: hidden; }
 .log .ln { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; animation: typein .35s ease both; }
 .log .ln i { font-style: normal; color: var(--accent); margin-right: .55rem; }

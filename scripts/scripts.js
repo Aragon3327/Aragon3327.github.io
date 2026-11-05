@@ -165,7 +165,7 @@
             }
         });
     }
-    var BASE = 72, cur = letters.map(function () { return BASE; }), tgt = letters.map(function () { return BASE; });
+    var BASE = 92, cur = letters.map(function () { return BASE; }), tgt = letters.map(function () { return BASE; });
     var nameRun = false, introT0 = 0, ptr = null;
     var INTRO = 1700;
     function nameLoop(now) {
@@ -406,4 +406,33 @@
         new IntersectionObserver(function (en) { en[0].isIntersecting ? start() : stop(); }).observe(cv);
     } else { start(); }
     document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+
+    /* ---- nav scroll-spy: underline the link of the section in view ---- */
+    (function () {
+        var secs = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+        var links = Array.prototype.slice.call(document.querySelectorAll('.nav a.l'));
+        if (!secs.length || !links.length) return;
+        function spy() {
+            var y = window.scrollY + window.innerHeight * 0.35, cur = null;
+            secs.forEach(function (s) { if (s.getBoundingClientRect().top + window.scrollY <= y) cur = s.id; });
+            links.forEach(function (a) {
+                if (a.getAttribute('href') === '#' + cur) a.setAttribute('aria-current', 'true');
+                else a.removeAttribute('aria-current');
+            });
+        }
+        window.addEventListener('scroll', spy, { passive: true });
+        window.addEventListener('resize', spy);
+        spy();
+    })();
+
+    /* ---- cursor spotlight on cards (fine pointers only) ---- */
+    if (fine && !reduce) {
+        Array.prototype.forEach.call(document.querySelectorAll('.stat, .card, .panel, .feature, .job'), function (el) {
+            el.addEventListener('pointermove', function (e) {
+                var r = el.getBoundingClientRect();
+                el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+                el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+            });
+        });
+    }
 })();
